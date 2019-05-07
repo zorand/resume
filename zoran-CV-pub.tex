@@ -1,0 +1,762 @@
+\documentclass[10pt]{article}
+
+\setlength{\parindent}{0pt} \setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in} \setlength{\textwidth}{6.5in}
+\setlength{\headheight}{0in} \setlength{\headsep}{0in}
+\setlength{\topmargin}{-0.2in} \setlength{\textheight}{9.3in}
+\setlength{\parsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\partopsep}{1pt} 
+\setlength{\topsep}{2pt}
+%\setlength{\itemsep}{-5pt}
+%\setlength{\labelwidth}{6pt}
+%\setlength{\labelsep}{0pt}
+
+\renewcommand{\section}[1]{ \vspace{10pt}\begin{flushleft}{\hspace{-0.2in }\Large\bf
+    #1}\end{flushleft}\nopagebreak }
+
+\renewcommand{\subsection}[1]{ \vspace{2pt}\begin{flushleft}{\hspace{-0.1in} \large\it
+    #1}\end{flushleft}\nopagebreak }
+
+
+\renewcommand{\thebibliography}[1]{ \list
+  {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+    \advance\leftmargin\labelsep \usecounter{enumi}}
+  \def\newblock{\hskip .11em plus .33em minus -.07em} \sloppy
+  \sfcode`\.=1000\relax}
+
+\begin{document}
+
+\begin{center}
+\vspace{-1.5in}
+  {\Large\bf Zoran Dimitrijevi\'{c}}\\
+  {\large\em Curriculum Vitae}
+\end{center}
+
+\begin{center}
+{\em zorand@gmail.com}\\
++1 (805) 259-5262\\
+http://3opan.net/$\sim$zorand
+\end{center}
+
+%\section{Vita}
+%
+%\begin{tabular}{ll}
+%  Birthday: \hspace{0.20in} 	& November 16, 1974. \\
+%  Birthplace: 			& \v{S}abac, Serbia, Yugoslavia.
+%\end{tabular}
+
+\vspace{-5pt}
+\section{Experience Summary}
+
+\begin{tabular}{ll}
+2019-present    & Independent consultant.\\
+2017-2019       & SAP Labs, Palo Alto, California.\\
+2014-2017       & Altiscale Inc. acquired by SAP Labs, Palo Alto, California.\\
+2004-2013       & Google Inc., Mountain View, California.\\
+1999-2004	& Teaching and Research Assistant, 
+			CS and ECE Department, UCSB. \\
+Summer 2003	& Instructor (Teaching Associate), CS Department, UCSB. \\
+Summer 2001	& Research Scientist, Sony 550 Digital Media Ventures, 
+			San Francisco, California. \\
+Summer 2000	& Research Intern, HP Labs, Palo Alto, California. \\
+1998-1999	& Research Assistant, CE\&CS Department, University of Belgrade, Serbia.\\
+Fall 1997	& Research Intern, ECE Department, University of Campinas, Brazil. \\
+\end{tabular}
+
+\vspace{-5pt}
+\section{Technical Interests}
+Design and implementation of large-scale storage systems, quality of service, 
+parallel and cluster-based computing, multimedia systems, and large-scale 
+search engines. Security, privacy and encryption. News and citizen journalism. 
+Open Source.
+
+
+\section{Education}
+
+\begin{tabular}{ll}
+June 2004 \hspace{0.16in}	& \textbf{Ph.D. in Computer Science}, 
+		University of California, Santa Barbara (UCSB). \\
+        & Dissertation title: ``Quality-of-Service Scheduling in Storage Systems''\\
+	&  Advisor: { Prof. Edward Y. Chang}. \\
+
+2003		& \textbf{M.S. in Computer Science}, 
+		University of California, Santa Barbara.\\ & GPA: 4.00/4.00. \\
+1999 		& \textbf{Dipl.Ing. in Electrical Engineering}, 
+		School of Electrical Engineering,\\
+ & 		University of Belgrade, Serbia, Yugoslavia. GPA: 8.95/10.00.
+\end{tabular}
+
+%\vspace{-5pt}
+\section{Experience}
+
+{\bf Principal Software Engineer,\\
+SAP Labs, Palo Alto, California, 2017--2019.}
+\begin{itemize}
+\vspace{-5pt}
+\item
+Tech lead for Hadoop team (open-source components of SAP Cloud Platform Big Data Services including Apache Hadoop, 
+Hive, Ranger and Tez). 
+Service owner for internal infrastructure for Altiscale CA and x509 certificates, data encryption-at-rest, 
+Kerberos, Hadoop build and deploy pipelines, and data transfer tools.
+Tech lead for extending Apache Ranger for SAP Big Data Services (https://github.com/ altiscale/ranger). 
+Launched Apache Ranger for SAP BDS in production. Launched SSL support for Altiscale HttpFs (and fixed a bug in open-source for swebhdfs tokens). 
+Prototyped Altiscale Hadoop and Spark running on Kubernetes. Prototyped autoscaling Spark when running on 
+Apache Yarn (on Kubernetes and on AWS). Implemented templates for microservices in Go with client-cert authentication and
+ported Altiscale encryption-at-rest key management service in Go. 
+\end{itemize}
+
+
+{\bf Principal Software Engineer,\\
+Altiscale Inc., Palo Alto, California, 2014--2017 (acquired by SAP in September 2016).}
+\begin{itemize}
+\vspace{-5pt}
+\item
+Tech lead for Data transfer tools. Improved open-source Hadoop distcp by multithreading file listings which were 
+slow for large number of S3 objects (in some cases improvement from 60 minutes to 2 minutes). Implemented java-based
+tool for rsync between HDFS and S3 (and Glacier). Refactored Altiscale ruby-based client copytohdfs for high-volume 
+enterprise customers.
+Wrote chef-server recipes for Altiscale disk partitioning and mkfs supporting dockerized environments.
+Designed and implemented Altiscale encryption-at-rest for HDFS based on 
+Linux dmcrypt+LUKS block-device encryption and client-cert based secure-hash infrastructure. 
+\item
+Tech lead for Hadoop team. 
+Owned and maintained several production chef-server recipes and Jenkins pipelines 
+including core Hadoop and internal x509 CA services. Various performance evaluation studies, especially for containerized environments and encrypted disks and SSDs.
+Designed and implemented open-source tool for multiplexing HttpFs transfers via multiple ssh tunnels: https://github.com/ altiscale/transfer-accelerator. Helped certify Altiscale as SAP acquired-to-ship product, especially for data-transfer tools and data encryption-at-rest. Helped with compliance certifications.
+%\item
+%September 1, 2016: Altiscale acquired by SAP.
+\end{itemize}
+
+%\pagebreak
+
+{\bf Software Engineer and Senior Software Engineer,\\
+Google Inc., Mountain View, California, 2004--2013.}
+\begin{itemize}
+\vspace{-5pt}
+\item
+2004--2005: Systems Infrastructure, Google File System (GFS) team. Worked with Howard Gobioff as my TL in Bill Coughran's team. Added background checksumming in GFS Chunkserver (C++) which run on most Google machines in production until migration from GFS to Collosus. Worked on improving integration testing infrastructure for GFS (injecting faults, Python).
+As a 0\% project launched www.google.co.yu. Launched www.google.cs. Launched www.google.rs after adding support to Google Geo-IP for my former country which kept changing names and borders. As a 20\% project, designed and prototyped Google Video Streaming Service (buffering layer for videos stored on GFS) which was later used as a starting architecture for YouTube streaming infrastructure.
+\item
+2005--2008: Systems Infrastructure, Google News Archive Search. As part of a small team with Yanghua Chu and Anurag Acharya (and later Dale Neal) designed and implemented Google News Archive Search. Implemented Google premium crawler. Implemented C++ frontend for News Archive Search (arfe). We launched News Archives in 2006 as part of news.google.com. Wrote all arfe-related borgcfg and related GFE and rpc-balancer rules. Worked with SRE teams to get required production Borg resources. Worked with PM teams to get all UI approved. Implemented most UI and Google-data-push (GDP) infrastructure for News Archives. Implemented all borgmon and related varz interfaces for arfe. Implemented backend APIs for Google one-box and news.google.com in arfe. Handled most of google.com traffic as Google News backend. Added support for pre-1970 dates for Google Search. Implemented and launched News Archive Search in several European languages. Launched Google Timeline. Implemented iGoogle module based on Archive Search. Worked with a team in India to include OCR documents from microfilms to News Archive Search.
+\item
+2009--2011: Google News. Technical owner for videos in Google News. Added user generated content from YouTube into Google News index. Designed, implemented and lunched this feature in production. Added news-video pubsub stream for Fresh Docs (Google real-time index at that time). Re-implemented search result pages for Google News back in GWS as part of One Google project (Google-wide project to provide unified infrastructure for search-result page rendering). On-call in production for Google News and News Archives. Launched Google News in several new languages including Serbian news.google.rs.
+\item
+2012: YouTube. Joined YouTube to start a new experimental project YouTube News.
+%\item
+%2013: Google Local Search. Tech Lead for Local listings.
+\end{itemize}
+
+{\bf Graduate Research Assistant for Prof. Edward Y. Chang,\\
+CS and ECE Department, UCSB, Santa Barbara, California, 2001--2004.}
+\begin{itemize}
+\vspace{-5pt}
+\item 
+{Proposed preemptible disk scheduling algorithms. Investigated  
+ preemptibility of disk IOs. Designed and implemented {\em Semi-preemptible IO} 
+ prototype. Proposed and designed preemptive RAID scheduling algorithms. 
+ Designed IO preemption and resumption criteria.  
+ Implemented a simulator for preemptible RAID systems ({\em PraidSim}). 
+ %(Disksim-based simulator of preemptible RAID systems). 
+ Research in the areas of disk profiling, modeling, and data storage.
+ Designed and implemented QoS extensions for Linux disk scheduling ({\em UCSB-IO}).}
+
+\vspace{-5pt}
+\item 
+ Co-designed MEMS-based disk buffer for streaming media servers. 
+ Co-designed the analytical framework, admission-control criteria, and data-placement 
+ algorithms.
+
+\vspace{-5pt}
+\item 
+Design and implementation of SfinX video surveillance system.
+Proposed the hardware and software architecture for SfinX. 
+Co-designed and co-implemented Xtream video streaming and storage system.
+Investigated video streaming over wireless networks.
+%Co-designed and co-implemented disk admission control algorithms.
+\end{itemize}
+
+
+%\begin{tabular}{ll}
+%{\bf Summer 2001}  & {\bf Research Intern for Dr. Sean Varah, Sony 
+%550 Digital Media Ventures,}\\
+% & {\bf San Francisco, California.}
+%\end{tabular}
+
+
+{\bf Research Scientist (Internship) for Dr. Sean Varah,\\
+Sony 550 Digital Media Ventures, San Francisco, California, Summer 2001.}
+\begin{itemize}
+\vspace{-5pt}
+\item
+Research in the design and implementation of real-time storage systems for streaming media.
+\end{itemize}
+
+
+%\begin{tabular}{ll}
+%{\bf Summer 2000}  & {\bf Research Intern for Dr. Dejan Miloji\v{c}i\'c,
+%			HP Labs, Palo Alto, California.}
+%\end{tabular}
+
+%\pagebreak
+
+{\bf Research Intern for Dr. Dejan Miloji\v{c}i\'c, HP Labs, Palo Alto, California, Summer 2000.}
+\begin{itemize}
+\vspace{-5pt}
+\item
+Researched the susceptibility of operating systems and software to soft errors.
+\end{itemize}
+
+
+%\pagebreak
+
+%\begin{tabular}{ll}
+%{\bf Winter 2000}  & {\bf Independent Research with Prof. Anurag Acharya, 
+%			CS Department, UCSB. }
+%\end{tabular}
+
+%{\bf Independent Research with Prof. Anurag Acharya, CS Department, UCSB, Winter 2000. }
+%\begin{itemize}
+%\vspace{-5pt}
+%\item
+% Designed and implemented a disk-profiling tool ({\em Diskbench}). 
+% Co-implemented open-source library for user-level access
+% to SCSI devices. Investigated problems involved with large-scale cluster 
+% architectures using UCSB Gargleblaster Beowulf cluster.
+%\end{itemize}
+
+
+%\begin{tabular}{ll}
+%{\bf 1998-1999} \hspace{0.15in}   & {\bf Research Assistant for 
+%			Prof. Veljko Milutinovi\'c, CE\&CS Department,} \\
+% & {\bf School of Electrical Engineering, University of Belgrade, Serbia.} 
+%\end{tabular}
+
+%{\bf Research Assistant for Prof. Veljko Milutinovi\'c, CE\&CS Department, 
+%School of Electrical Engineering, University of Belgrade, Serbia, June 1998--July 1999.} 
+%\begin{itemize}
+%\vspace{-5pt}
+%\item
+%Designed and implemented extensions of an execution-driven shared memory simulator 
+%({\em Limes}) to enable simulation of distributed shared-memory systems. 
+%Worked on the design and architecture of a system-on-a-chip GPS handheld 
+%cartographic display system. Worked on the design of split-cache architectures. 
+%\end{itemize}
+
+
+%\begin{tabular}{ll}
+%{\bf Fall 1997}  \hspace{0.20in}  & {\bf Research Intern (IAESTE exchange program) for 
+%		Prof. Ariovaldo Garcia,} \\
+% & 		{\bf ECE Department, University of Campinas, Brazil.}
+%\end{tabular}
+
+%{\bf Research Intern (IAESTE exchange program) for Prof. Ariovaldo Garcia, 
+%ECE Department, \\
+%University of Campinas, Brazil, Fall 1997.}
+%\begin{itemize}
+%\vspace{-5pt}
+%\item
+%Worked on message-passing programming in C for nCube and Parallel Virtual Machine 
+%({\em PVM}) for Solaris clusters.
+%\end{itemize}
+
+
+\pagebreak
+
+\section{Publications}
+\begin{thebibliography}{22.}
+
+%\subsection{Ph.D. Dissertation}
+\vspace{-6pt}
+
+\bibitem{zoran-thesis}
+ Zoran Dimitrijevi\'c. 
+ \newblock {\bf Quality of service scheduling in storage systems.} 
+ \newblock Ph.D. Dissertation (ISBN 0-496-84077-0), Department of Computer Science, 
+ University of California, Santa Barbara, June 2004.
+%\end{thebibliography}
+
+
+\subsection{Journal Papers}
+%\begin{thebibliography}{22.}
+\vspace{-6pt}
+
+\bibitem{ts2007}
+ R.~Rangaswami, Z.~Dimitrijevi\'c, E.~Chang, and K.~Schauser.
+ \newblock {\bf Building MEMS-based Storage Systems for Streaming Media.}
+ \newblock {\em ACM Transactions on Storage}, Volume 3 Issue 2, June 2007.
+
+\bibitem{tc2005}
+ Z.~Dimitrijevi\'c, R.~Rangaswami, and E.~Chang.
+ \newblock {\bf Systems Support for Preemptive Disk Scheduling.}
+ \newblock {\em IEEE Transactions on Computers}, pages 1314--1326, October 2005.
+
+\bibitem{hpl-tc-softerrors}
+ A.~Messer, P.~Bernadat, G.~Fu, D.~Chen, Z.~Dimitrijevi\'c, 
+ D.~Lie, D.~Mannaru, A.~Riska, and D.~Miloji\v{c}i\'c.
+ \newblock {\bf Susceptibility of commodity systems and software to 
+ memory soft errors.}
+ \newblock {\em IEEE Transactions on Computers}, pages 1557--1568, December 2004.
+
+
+\bibitem{tmm03}
+ R.~Rangaswami, Z.~Dimitrijevi\'c, E.~Chang, and S.-H.~G.~Chan.
+ \newblock {\bf Fine-grained device management in an interactive media server.}
+ \newblock {\em IEEE Transactions on Multimedia}, pages 558--569, December 2003.
+
+\bibitem{tcca1}
+ M.~Prvulovi\'c, D.~Marinov, Z.~Dimitrijevi\'c, and V.~Milutinovi\'c.
+ \newblock {\bf Split temporal/spatial cache: A survey and reevaluation of performance.}
+ \newblock {\em Newsletter of Technical Committee on Computer Architecture}, 
+ pages 8--17, IEEE Computer Society, July 1999.
+
+\bibitem{tcca2}
+ M.~Prvulovi\'c, D.~Marinov, Z.~Dimitrijevi\'c, and V.~Milutinovi\'c.
+ \newblock {\bf The split spatial/non-spatial cache: A performance and complexity evaluation.}
+ \newblock {\em Newsletter of Technical Committee on Computer Architecture}, 
+ pages 18--25, IEEE Computer Society, July 1999.
+
+
+\subsection{Conference Papers}
+\vspace{-6pt}
+
+\bibitem{ic2e2019}
+ Z.~Dimitrijevi\'c, C.~Sahin, C.~Tinnefeld, and J.~Patvarczki
+ \newblock {\bf Importance of Application-level Resource Management in Multi-cloud Deployments (invited).}
+ \newblock {\em Accepted to IEEE International Conference on Cloud Engineering (IC2E)}, June 2019.
+
+\bibitem{rtss2005}
+ B.~Liu, R.~Rangaswami, and Z.~Dimitrijevi\'c. 
+ \newblock {\bf Thwarting virtual bottlenecks in multi-bitrate streaming
+ servers.}
+ \newblock {\em Proceedings of IEEE Real-Time Systems Symposium (RTSS)}, December 2005.
+
+\bibitem{icme2004}
+ R.~Rangaswami, Z.~Dimitrijevi\'c, K.~Kakligian, E.~Chang, and Y.-F.~Wang. 
+ \newblock {\bf The SfinX video surveillance system.}
+ \newblock {\em Accepted to IEEE International Conference on Multimedia and
+ Expo (ICME)}, June 2004.
+
+\bibitem{sfinx-pcm2003}
+ Z.~Dimitrijevi\'c, G.~Wu, and E.~Chang.
+ \newblock {\bf {SFINX}: {A} multi-sensor fusion and mining system (invited).}
+ \newblock {\em Proceedings of the IEEE Pacific-rim Conference on Multimedia},
+ Singapore, December 2003.
+
+\bibitem{ipsi2003} 
+ Z.~Dimitrijevi\'c and R.~Rangaswami.
+ \newblock {\bf Quality of service support for real-time storage systems (invited).} 
+ \newblock {\em Proceedings of International IPSI-2003 Conference}, 
+ St. Stefan, Montenegro, October 2003.
+
+\bibitem{spio-fast03}
+ Z.~Dimitrijevi\'c, R.~Rangaswami, and E.~Chang.
+ \newblock {\bf Design and implementation of {Semi-preemptible IO}.}
+ \newblock {\em Proceeding of the Second Usenix File and Storage Technology (FAST)}, 
+ pages 145--158, San Francisco, California, March 2003.
+
+\bibitem{raju03-icde}
+ R.~Rangaswami, Z.~Dimitrijevi\'c, E.~Chang, and K.~E.~Schauser. 
+ \newblock{\bf MEMS-based disk buffer for streaming media servers.}
+ \newblock {\em Proceedings of the 19th IEEE International Conference on Data
+ Engineering (ICDE)}, pages 619--630, Bangalore, India, March 2003.
+
+\bibitem{vio-short}
+ Z.~Dimitrijevi\'c, R.~Rangaswami, and E.~Chang. 
+ \newblock {\bf Virtual IO: Preemptible disk access.\footnote{Extended version
+ of this paper is published as Semi-preemptible IO~\cite{spio-fast03}.}}
+ \newblock {\em Proceedings of the 10th ACM Conference on Multimedia}, 
+ pages 231--234, Juan Les Pins, France, December 2002.
+
+\bibitem{xtream}
+ Z.~Dimitrijevi\'c, R.~Rangaswami, and E.~Chang.
+ \newblock {\bf The {XTREAM} multimedia system.}
+ \newblock {\em Proceedings of IEEE Conference on Multimedia and Expo}, pages 545--548, 
+ Lausanne, Switzerland, August 2002.
+
+\bibitem{jvm}
+ D.~Chen, A.~Messer, P.~Bernadat, G.~Fu, Z.~Dimitrijevi\'c, 
+ D.~Lie, D.~Mannaru, A.~Riska, and D.~Miloji\v{c}i\'c.
+ \newblock {\bf JVM susceptibility to memory errors.}
+ \newblock {\em Proceedings of Usenix Java[tm] Virtual Machine Research and Technology 
+ Symposium}, pages 67--77, Monterey, California, April 2001.
+%\end{thebibliography}
+
+
+\subsection{Technical Reports}
+%\footnote{Some of the techical reports are
+%subsequently extended and published as conference or journal papers.}
+%\begin{thebibliography}{22.}
+\vspace{-6pt}
+\bibitem{fiu-stream}
+ B.~Liu, R.~Rangaswami, and Z.~Dimitrijevi\'c.
+ \newblock {\bf Thwarting virtual bottlenecks in multi-bitrate streaming
+ servers.}
+ \newblock FIU Technical Report TR-2005-10-02, 2005.\footnote{Subsequently
+ published as a conference paper~\cite{rtss2005}.}
+
+%\bibitem{praid-04}
+% Z.~Dimitrijevi\'c, R.~Rangaswami, and E.~Chang.
+% \newblock {\bf Preemptive RAID scheduling.}
+% \newblock UCSB Technical Report TR-2004-19, 2004.
+
+\bibitem{diskbench}
+ Z.~Dimitrijevi\'c, R.~Rangaswami, D.~Watson, and A.~Acharya. 
+ \newblock {\bf Diskbench: User-level disk feature extraction tool.}
+ UCSB Technical Report TR-2004-18, 2004.
+
+\bibitem{scsibench} 
+Z.~Dimitrijevi\'c, R.~Rangaswami, D.~Watson, and A.~Acharya.
+\newblock {\bf User-level SCSI disk feature extraction.}
+\newblock Technical Report, UCSB, July 2001.
+
+\bibitem{hpl-softerrors}
+ A.~Messer, P.~Bernadat, G.~Fu, D.~Chen, Z.~Dimitrijevi\'c, 
+ D.~Lie, D.~Mannaru, A.~Riska, and D.~Miloji\v{c}i\'c.
+ \newblock {\bf Susceptibility of modern systems and software to soft errors.}
+ \newblock {\em HP Labs Technical Report HPL-2001-43}, 2001.\footnote{Subsequently
+ published as a journal paper~\cite{hpl-tc-softerrors}.}
+
+\bibitem{gps1}
+ I.~Ikodinovi\'c, Z.~Dimitrijevi\'c, V.~Milutinovi\'c, and A.~Prete.
+ \newblock {\bf GPS-enabled handheld cartographic display systems: A survey.}
+ \newblock Technical Report, School of Electrical Engineering, 
+ University of Belgrade, 2000.
+
+\bibitem{gps2} 
+ I.~Ikodinovi\'c, Z.~Dimitrijevi\'c, V.~Milutinovi\'c, and A.~Prete.
+ \newblock {\bf Proposing the architecture for a high-performance GPS-enabled handheld cartographic display system.}
+ \newblock Technical Report, School of Electrical Engineering, 
+ University of Belgrade, 2000.
+
+
+\subsection{Other Publications}
+
+\vspace{-6pt}
+
+\bibitem{praid-04}
+ Z.~Dimitrijevi\'c, R.~Rangaswami, and E.~Chang.
+ \newblock {\bf Architectural Support for Preemptive RAID schedulers.}
+ \newblock Usenix FAST WiP Report/Poster, March, 2004.
+
+\bibitem{limes-book}
+ I.~Ikodinovi\'c, Z.~Dimitrijevi\'c, D.~Magdi\'c, A.~Milenkovi\'c, J.~Proti\'c, and 
+ V.~Milutinovi\'c.
+ \newblock {\bf Limes: A multiprocessor simulation environment for PC platforms.}
+ \newblock Book chapter in {\em Microprocessor and Multimicroprocessor Systems} 
+ by Veljko Milutinovi\'c, ISBN 0471357286, John Wiley \& Sons, Inc., 2000.
+
+\bibitem{diplomski}
+ Z.~Dimitrijevi\'c.
+ \newblock {\bf Software environment for the simulation of distributed shared memory 
+ multiprocessor systems.}
+ \newblock Engineering Diploma Thesis (in Serbian), School of Electrical Engineering, 
+ University of Belgrade, Serbia, July 1999.
+\end{thebibliography}
+
+
+\vspace{-5pt}
+\hspace{0.25in} (Full papers are available on-line at 
+{\em http://3opan.net/$\sim$zorand/publications.html}.)
+
+
+\section{Teaching Experience}
+
+\begin{tabular}{ll}
+{ Summer 2003} & 
+ {\bf Instructor (Teaching Associate)}, CS Department, Summer Sessions, UCSB.\\
+ & {\em CS170 Operating Systems} (upper-division undergraduate course).\\
+%Organized and lectured course of 46 students with the help of two Teaching Assistants.
+
+{ Winter 2003} & 
+ {\bf Teaching Assistant for Prof. Tao Yang}, CS Department, UCSB. \\
+ & {\em CS240B High Performance Computing Systems and Applications} (graduate-level course).\\
+
+{ Winter 2001} & 
+ {\bf Teaching Assistant for Prof. Peter Cappello}, CS Department, UCSB. \\
+ & {\em CS172 Software Engineering} (upper-division undergraduate course).\\
+
+{ Fall 2000} & 
+ {\bf Teaching Assistant for Prof. Alan Konheim}, CS Department, UCSB. \\
+ & {\em CS176A Computer Networks} (upper-division undergraduate course) \\
+
+{ Spring 2000} & 
+ {\bf Teaching Assistant for Prof. Klaus Schauser}, CS Department, UCSB. \\
+ & {\em CS290I Scalable Internet Services and Systems} (graduate-level course).\\
+
+{ Winter 2000} & 
+ {\bf Teaching Assistant for Prof. Amr El Abbadi}, CS Department, UCSB. \\
+ & {\em CS130A Data Structures and Algorithms I} (upper-division undergraduate course).\\
+
+{ Fall 1999}   & 
+ {\bf Teaching Assistant for Prof. Anurag Acharya}, CS Department, UCSB. \\
+ & {\em CS170 Operating Systems} (upper-division undergraduate course).\\
+\end{tabular}
+
+
+
+%\pagebreak
+
+\section{Selected Talks}
+\vspace{-6pt}
+\begin{thebibliography}{22.}
+
+\bibitem{ucsb-2011} 
+{\bf YouTube News: Broadcasting the World.} 
+Industry Keynote, UCSB Graduate Student Workshop, October 2011.
+
+\bibitem{ucb-talk} 
+{\bf Google: organizing the world's information... and loving it.} Google
+recruiting tech talk, University of Colorado at Boulder, October
+2005.
+
+\bibitem{fiu-talk} 
+{\bf Google: a computer scientist's playground.} Invited talk at 
+Computer Science Department, FIU, Miami, April 2005.
+
+\bibitem{rich-class} 
+{\bf Two Pieces of Google Core Infrastructure: GFS and MapReduce.} 
+Invited lecture for Prof. Rich Wolski's CS290B Advanced Operating Systems 
+course, UCSB, March 2005.
+
+%\bibitem{etf-talk} 
+%{\bf Google: a computer scientist's playground.} Invited talk at 
+%School of Electrical Engineering, University of Belgrade, Serbia, December
+%2004.
+
+\bibitem{utk-talk} 
+{\bf Google: a computer scientist's playground.} Invited talk at 
+Innovative Computing Laboratory, University of Tennessee at Knoxville, October 2004.
+
+\bibitem{ibm-talk} 
+{\bf High-performance preemptible and MEMS-based IOs.} Invited talk at 
+IBM Almaden \\Research Center, Almaden, California, November 2003.
+
+%\bibitem{ipsi2003-talk} 
+%{\bf Using open source in academia for computer science research and education.}
+%\\Tutorial talk at IPSI-2003, St. Stefan, Montenegro, October 2003.
+
+\bibitem{fast-talk} 
+{\bf Design and implementation of Semi-preemptible IO.} Conference talk at 
+Usenix FAST'03, \\San Francisco, California, April 2003.
+
+\bibitem{gl1} 
+{\bf Multiprocessor systems.} Guest lecture for 
+ECE154 Computer Architecture, UCSB, Winter 2003.
+
+\bibitem{gl2} 
+{\bf I/O storage.} Guest lecture for ECE154 Computer Architecture, 
+UCSB, Winter 2003.
+
+%\bibitem{gl3} 
+%{\bf QoS scheduling for storage systems.} Guest lecture for ECE160 
+%Multimedia Systems, UCSB,\\ Spring 2003.
+
+\bibitem{ucla-vio}
+{\bf Virtual IO: Preemptible disk access.} Research seminar for Prof. Richard 
+Muntz's group, UCLA, August 2002.
+
+%\bibitem{gl4} 
+%{\bf Hard-disk architecture.} Guest lecture for ECE160 Multimedia Systems, 
+%UCSB, Spring 2002.
+
+%\bibitem{xtream-sony} 
+%{\bf The XTREAM multimedia system.} Research seminar (with Sony Research), UCSB, \\ 
+%February 2002.
+
+%\bibitem{gl5} 
+%{\bf Disk admission control.} Intern project presentation at 
+%Sony 550 DMV, San Francisco, California, Summer 2001.
+
+%\bibitem{scsibench-talk} 
+%{\bf Disk feature extraction.} Research seminar (with Sony Research), UCSB, Winter 2001.
+
+%\bibitem{hpl-tal} 
+%{\bf OS memory error susceptibility.} Intern project presentation at 
+%HP Labs, Palo Alto, California, Summer 2000.
+\end{thebibliography}
+
+
+%\section{Invited Lectures}
+%\begin{thebibliography}{22.}
+
+%\bibitem{proof} Computational complexity and proof-theoretic power in
+%  typed lambda calculi.  \newblock \emph{American Mathematical Society
+%    Summer Meeting,} 1982.  \newblock Abstract appeared in {\em
+%    Abstracts of the American Mathematical Society,} 3(5):376, August
+%  1982.  \newblock Results from paper~\cite{type}.
+%\end{thebibliography}
+
+%\section{Editorial Duties}
+%\begin{enumerate}
+%\end{enumerate}
+
+%\section{Software Research Projects}
+
+%\pagebreak
+
+
+\section{Awards, Fellowships, Honors}
+\begin{tabular}{ll}
+2018 	& SAP Catalyst. \\
+2015 	& IEEE Senior Member. \\
+2015-present 	& Member of IEEE Computer Society Industry Advisory Board. \\
+2010 	& Google OC Award for Google File System. \\
+2003 	& President's Work Study Award for 2003-2004, UCSB. \\
+2002	& Graduate Student Travel Grant, Graduate Division, UCSB.\\
+1999 	& Dean's Fellowship, College of Engineering, UCSB. \\
+1999 	& Teaching Assistantship and Tuition Fellowship for 1999-2003, 
+		CS Department, UCSB. \\
+%1997	& Travel Grant to Brazil from local industry, \v{S}abac, Serbia.\\
+%1993-1998 & Fellowship from the Ministry of Education, Republic of Serbia.\\
+1993 	& Second place on the classification exam in Physics, University of Belgrade. \\
+1988-1992 & First place awards on Serbian state Physics competitions in 
+		1988, 1990, and 1992.
+\end{tabular}
+
+
+\section{Refereeing}
+
+{\bf Journals:}
+{\em ACM Transactions on Storage, IEEE Transactions on Parallel and Distributed Systems},
+{\em The Computer Journal} (published by Oxford University Press on behalf of
+British Computer Society), {\em Software Practice and Experience}
+(published by John Wiley \& Sons, Ltd.), IEEE Transactions on Computers, 
+IEEE Transactions on Cloud Computing, and Applied Computing and Informatics.
+
+{\bf Conferences:}
+{\em IEEE Infocom 2005, International Conference on Database Systems for
+Advanced Applications (DASFAA 2004), IEEE Conference on Multimedia and
+Expo (ICME2004, ICME2005), IEEE MMM 2006, ACM Multimedia 2006, IEEE (MSST2010) Symposium on 
+Massive Storage Systems and Technologies, ACM/IFIP/USENIX Middleware 2016, UCSB Computer Science Capstone 2019,
+IEEE International Conference on Cloud Engineering (IC2E) 2019}.
+
+
+%\section{Program Committees}
+%\begin{enumerate}
+%\end{enumerate}
+
+
+%\section{Professional Societies}
+%Member of the ACM, IEEE, IEEE Computer Society, and Usenix.
+
+
+%\pagebreak
+
+
+%\section{Professional and University Service}
+%\vspace{-6pt}
+%\begin{enumerate}
+%
+%\item Maintaining web-page on Operating Systems Storage for 
+%IEEE DSO, 2002-present.
+%
+%\end{enumerate}
+
+%\pagebreak
+
+%\section{Community Service}
+%\section{Research Grants and Contracts}
+
+%%% software projects
+
+%%% skills
+
+
+%\section{Professional Meetings}
+%\vspace{-6pt}
+
+%\begin{enumerate}
+%\item {\em Sixth Usenix Operating Systems Design and Implementation (OSDI)}, 
+%San Francisco, California, December 2004.
+
+%\vspace{-5pt}
+%\item {\em Third Usenix File and Storage Technology (FAST)}, San Francisco, 
+%California, March 2004.
+
+%\vspace{-5pt}
+%\item {\em First ACM International Workshop on Video Surveillance}, Berkeley, 
+%California, November 7, 2003.
+
+%\vspace{-5pt}
+%\item {\em 11th ACM Multimedia}, Berkeley, California, November 2003.
+
+%\vspace{-5pt}
+%\item {\em Second Usenix File and Storage Technology (FAST)}, San Francisco, 
+%California, March 2003.
+
+%\vspace{-5pt}
+%\item {\em Workshop on Robustness Analysis Tools with Applications to
+%the Biological and Physical Sciences: The Challenge of Complexity}, Kavli Institute 
+%for Theoretical Physics, University of California, Santa Barbara, March 2003.
+
+%\vspace{-5pt}
+%\item {\em 10th ACM Multimedia}, Juan Les Pins, France, December, 2002.
+
+%\vspace{-5pt}
+%\item {\em IEEE International Conference on Multimedia and Expo}, Lausanne, 
+%Switzerland, August, 2002.
+
+%\vspace{-5pt}
+%\item {\em ACM SIGMOD/PODS}, Santa Barbara, California, May 2001.
+
+%\vspace{-5pt}
+%\item {\em Java(tm) Virtual Machine Research and Technology Symposium}, Monterey,
+%California, April, 2001.
+
+%\vspace{-5pt}
+%\item {\em 18th IEEE Symposium on Mass Storage Systems and Technologies
+%(in cooperation with the Ninth NASA Goddard Conference on Mass Storage
+%Systems and Technologies)}, San Diego, California, April, 2001.
+
+%\vspace{-5pt}
+%\item {\em YU INFO'99 Symposium on Computer Sciences and Informational Technologies}, 
+%Kopaonik, Serbia, Yugoslavia, March 1999.
+
+%\vspace{-5pt}
+%\item {\em Seminar on Telecommunications}, National Technical University of Athens, 
+%Greece, March 1998.
+
+%\vspace{-5pt}
+%\item {\em Seminar on Physics}, Research Center Petnica, Serbia, Yugoslavia, 1991.
+%\end{enumerate}
+
+%\section{Personal}
+%My hobbies include Linux and other open-source projects, Internet cultures, 
+%cycling, mountain biking, skydiving, little karate, even less aikido,
+%skiing, scuba diving, music, travelling... and C.
+
+%\pagebreak 
+
+%\section{References}
+%\vspace{6pt}
+%
+%Available upon request.
+
+%\begin{tabular}{ll}
+%{\bf Dr. Edward Y. Chang}                         & {\bf Dr. Klaus E. Schauser}\\    
+%Department of Electrical and Computer Engineering & Department of Computer Science\\
+%University of California, Santa Barbara       & University of California, Santa Barbara\\ 
+%UCSB, CA 93106					  & UCSB, CA 93106 \\
+%Tel: (805) 893-2971                               & E-mail: {\em schauser@cs.ucsb.edu} \\
+%E-mail: {\em echang@ece.ucsb.edu} & \\
+%&\\
+%{\bf Dr. Tao Yang}                        &  {\bf Dr. Elizabeth M. Belding-Royer}\\    
+%Department of Computer Science            &  Department of Computer Science\\          
+%University of California, Santa Barbara   &  University of California, Santa Barbara\\
+%UCSB, CA 93106				  &  UCSB, CA 93106\\
+%Tel: (805) 893-4384                       &  Tel: (805) 893-3411\\                     
+%E-mail: {\em tyang@cs.ucsb.edu}           &  E-mail: {\em ebelding@cs.ucsb.edu}\\
+%&\\
+%{\bf Dr. Anurag Acharya}    	& \\
+%Google, Inc.                 	& \\
+%1600 Amphitheatre Pkwy. 	& \\
+%Mountain View, CA 94043    	& \\
+%Tel: (650) 330-0100           	& \\
+%E-mail: {\em acha@google.com} 	& \\
+%\end{tabular}
+
+%\section{Consulting and Visiting}
+
+%\section{Courses Taught}
+
+\end{document}
